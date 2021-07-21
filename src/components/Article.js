@@ -4,21 +4,21 @@ function Article( { titleName, date = "January 1, 1970", preview, minute }) {
     let bento ="🍱"
     const coffeeNum = Math.ceil(minute/5)
     const bentoNum = Math.ceil(minute/10)
-    //console.log(coffeeNum)
     let display=""
+    //can also use coffee.repeat(coffeeNum)
     function coffeeDisplay(coffeeNum) {
         for (let i = 1; i <=coffeeNum;i++ ){
             display+=coffee 
         }
         return display
     }
+    //can also use bento.repeat(bentoNum)
     function bentoDisplay(bentoNum) {
         for (let i = 1; i <=bentoNum;i++ ){
             display+=bento 
         }
         return display
     }
-
     return (
         <article>
             <h3>{titleName}</h3>
@@ -32,5 +32,3 @@ function Article( { titleName, date = "January 1, 1970", preview, minute }) {
 }
 
 export default Article
-
-//if minute < 30, Math.minutes.ceil. divide by 5 = num. (NUm x coffeemoji) = let coffeEmoji
